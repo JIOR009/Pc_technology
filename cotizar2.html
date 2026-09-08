@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotización - PC Technology</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-contenedor {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-contenedor h2 {
+            margin-bottom: 20px;
+            color: #333333;
+            text-align: center;
+        }
+        .campo {
+            margin-bottom: 15px;
+        }
+        .campo label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555555;
+        }
+        .campo input[type="text"],
+        .campo select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn-enviar {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-enviar:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-contenedor">
+        <h2>Cotizar Servicio</h2>
+        <form action="#" method="POST">
+            
+            <!-- Nombre -->
+            <div class="campo">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+            </div>
+
+            <!-- Servicio a cotizar -->
+            <div class="campo">
+                <label for="servicio">nombre del producto:</label>
+               <input type="text" id="producto" name="producto" placeholder="escribe el nombre del producto">
+                
+            </div>
+
+            <div class="campo">
+                <label for="servicio">cantidad del producto:</label>
+               <input type="text" id="producto" name="producto" placeholder="escribe el nombre del producto">
+                
+            </div>
+
+            <!-- Método de pago -->
+            <div class="campo">
+                <label for="pago">Método de pago:</label>
+                <select id="pago" name="pago" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="efectivo">Efectivo</option>
+                    <option value="tarjeta">Tarjeta</option>
+                </select>
+            </div>
+
+            <!-- Botón de enviar -->
+            <button type="submit" class="btn-enviar">Solicitar Cotización</button>
+
+        </form>
+    </div>
+    <a href="padweb.html"><button type="submit" class="">volver a la pagina web</button></a>
+</body>
+</html>

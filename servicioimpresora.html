@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna y limpia */
+            margin: 0;
+            background-color: #f4f4f9; /* Un fondo gris muy suave */
+            color: #333;
+        }
+
+        /* Estilos del Encabezado (Header) */
+        header {
+            background-color: #ffffff; /* Fondo blanco puro para limpieza */
+            color: #333;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between; /* Separa logo y menú */
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra suave para dar profundidad */
+    
+        }
+
+        /* Estilos del Logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none; /* Quita subrayado si es un enlace */
+            color: inherit;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff; /* Color azul tecnológico accent */
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .slogan {
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: -2px;
+        }
+
+        /* Estilos del Menú de Navegación */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem; /* Espaciado entre items */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s ease; /* Transición suave para el hover */
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        /* Efecto Hover con línea inferior */
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #007bff;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Estilos del Botón de Acción (Call to Action) */
+        .cta-button {
+            background-color: #007bff;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsividad básica para móviles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+
+            .cta-button {
+                margin-top: 1rem;
+            }
+        }
+
+        /* Contenedor de las tarjetas - CONFIGURADO A 3 COLUMNAS */
+        .productos-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+            gap: 25px; /* Espacio entre tarjetas */
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Estilo de la tarjeta */
+        .producto-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Efecto al pasar el mouse */
+        .producto-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Contenedor de la imagen */
+        .imagen-contenedor {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            background-color: #ececec;
+        }
+
+        /* La imagen se adapta al contenedor sin deformarse */
+        .imagen-contenedor img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* Efecto de zoom en la imagen al hacer hover */
+        .producto-card:hover .imagen-contenedor img {
+            transform: scale(1.05);
+        }
+
+        /* Detalles del producto (Texto) */
+        .producto-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .producto-categoria {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #888;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .producto-titulo {
+            font-size: 18px;
+            color: #333;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+
+        .producto-precio {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2ecc71; /* Color verde éxito */
+            margin-bottom: 15px;
+        }
+
+        /* Botón de acción */
+        .btn-comprar {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            margin-top: auto; /* Empuja el botón siempre al fondo */
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-comprar:hover {
+            background-color: #2980b9;
+        }
+
+        /* --- BONUS RESPONSIVO --- */
+        /* Si la pantalla es mediana (Tablets), muestra 2 columnas */
+        @media (max-width: 900px) {
+            .productos-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        /* Si la pantalla es chica (Celulares), muestra 1 columna */
+        @media (max-width: 600px) {
+            .productos-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        a{
+            color: black;
+        }
+        a:hover{
+            color: aqua;
+        }
+    </style>
+
+<header>
+    <a href="#" class="logo-container">
+        <div class="logo-icon">PC</div>
+        <div class="logo-text">
+            <span class="company-name">Technology</span>
+            <span class="slogan">Tu aliado digital</span>
+        </div>
+    </a>
+
+    <nav>
+        <ul>
+            <li><a href="padweb.html">Inicio</a></li>
+            <li><a href="mapreventivo.html">mantenimiento preventivo</a></li>
+            <li><a href="dispoelectricos.html">Productos electronicos</a></li>
+            <li><a href="mcorrosivo.html">mantenimiento correctivo</a></li>
+            <li><a href="servicios.html">servicios</a></li>
+        </ul>
+    </nav>
+<a href="cotizar.html" class="cta-button">cotizar</a>
+</header>
+
+     <div class="productos-container">
+
+        <div class="producto-card">
+            <div class="imagen-contenedor">
+                <img src="imagenes/imagenimpresorapreventiva.webp" alt="Tenis Deportivos">
+            </div>
+            <div class="producto-info">
+                <h3 class="producto-titulo">mantenimiento preventivo</h3>
+                <span class="producto-precio">700lps</span>
+                <p>pc techonoly le hace mantenimiento a tu impresora, solo limmpieza</p>
+                
+            </div>
+        </div>
+
+        <div class="producto-card">
+            <div class="imagen-contenedor">
+                <img src="imagenes/imagenimpresoracorrectiva.webp" alt="Audífonos Premium">
+            </div>
+            <div class="producto-info">
+                <h3 class="producto-titulo">mantenimiento correctivo</h3>
+                <span class="producto-precio">1000lps</span> 
+                <p>pc tecnology le hace cambios a las piezas malas de tu impresora</p>           
+               
+            </div>
+        </div>

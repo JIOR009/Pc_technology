@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /* Estilos Generales y Reseteo */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Estilos del Encabezado (Header) */
+        header {
+            background-color: #ffffff;
+            color: #333;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* Estilos del Logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .slogan {
+            font-size: 0.8rem;
+            margin-top: -2px;
+            color: #666;
+        }
+
+        /* Estilos del Menú de Navegación */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        /* Efecto Hover con línea inferior */
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #007bff;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Estilos del Botón de Acción (Call to Action) */
+        .cta-button {
+            background-color: #007bff;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsividad Avanzada para Móviles y Tablets */
+        @media (max-width: 992px) {
+            header {
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+                text-align: center;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo-container">
+            <div class="logo-icon">PC</div>
+            <div class="logo-text">
+                <span class="company-name">Technology</span>
+                <span class="slogan">Tu aliado digital</span>
+            </div>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="padweb.html">inicio</a></li>
+                <li><a href="mapreventivo.html">Productos mantenimiento a computadoras</a></li>
+                <li><a href="dispoelectricos.html">Productos electrónicos</a></li>
+                <li><a href="mcorrosivo.html">Productos mantenimiento correctivo</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+            </ul>
+        </nav>
+ 
+        <a href="contactanos.html" class="cta-button">Contáctanos</a>
+    </header>
+    <style>
+
+        .carrusel-contenedor {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+ 
+        .carrusel-track {
+            display: flex;
+            width: 600%;
+            animation: cambio-imagen 24s infinite ease-in-out;
+        }
+
+     
+        .carrusel-item {
+            width: 100%;
+            position: relative;
+        }
+
+        .carrusel-item img {
+            width: 100%;
+            display: block;
+            height: 450px; 
+            object-fit: cover; 
+        }
+
+    
+        @keyframes cambio-imagen {
+            /* Imagen 1 */
+            0%, 12% { transform: translateX(0); }
+            
+            /* Transición a Imagen 2 */
+            16%, 28% { transform: translateX(-16.66%); }
+            
+            /* Transición a Imagen 3 */
+            32%, 44% { transform: translateX(-33.33%); }
+            
+            /* Transición a Imagen 4 */
+            48%, 60% { transform: translateX(-50%); }
+            
+            /* Transición a Imagen 5 */
+            64%, 76% { transform: translateX(-66.66%); }
+            
+            /* Transición a Imagen 6 */
+            80%, 92% { transform: translateX(-83.33%); }
+            
+            /* Regresa al inicio */
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+
+
+    
+
+    <div class="carrusel-contenedor">
+        <div class="carrusel-track">
+            <!-- Imagen 1 -->
+            <div class="carrusel-item">
+                <a href="imagenes/memoria ram ddr3 para carrusel.webp"><img src="imagenes/memoria ram ddr3 para carrusel.webp" alt="Imagen 1"></a>
+            </div>
+            <!-- Imagen 2 -->
+            <div class="carrusel-item">
+                <a href="imagenes/memoria ram ddr3 para carrusel2.webp"><img src="imagenes/memoria ram ddr3 para carrusel2.webp" alt="Imagen 2"></a>
+            </div>
+            <!-- Imagen 3 -->
+            <div class="carrusel-item">
+                <a href="imagenes/memoria ram ddr3 para carrusel3.webp"><img src="imagenes/memoria ram ddr3 para carrusel3.webp" alt="Imagen 3"></a>
+            </div>
+            <!-- Imagen 4 -->
+            <div class="carrusel-item">
+                <a href="imagenes/memoria ram ddr3 para carrusel4.webp"><img src="imagenes/memoria ram ddr3 para carrusel4.webp" alt="Imagen 4"></a>
+            </div>
+            <!-- Imagen 5 -->
+            <div class="carrusel-item">
+                <a href="imagenes/memoria ram ddr3 para carrusel5.webp"><img src="imagenes/memoria ram ddr3 para carrusel5.webp" alt="Imagen 5"></a>
+            </div>
+            <!-- Imagen 6 -->
+            <div class="carrusel-item">
+                <a href="imagenes/memoria ram ddr3 para carrusel6.webp"><img src="imagenes/memoria ram ddr3 para carrusel6.webp" alt="Imagen 6"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

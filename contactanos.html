@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación - PC Technology</title>
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna y limpia */
+            margin: 0;
+            background-color: #f4f4f9; /* Un fondo gris muy suave */
+            color: #333;
+        }
+
+        /* Estilos del Encabezado (Header) */
+        header {
+            background-color: #ffffff; /* Fondo blanco puro para limpieza */
+            color: #333;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between; /* Separa logo y menú */
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra suave para dar profundidad */
+            position: sticky; /* Se mantiene arriba al hacer scroll */
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Estilos del Logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none; /* Quita subrayado si es un enlace */
+            color: inherit;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff; /* Color azul tecnológico accent */
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .slogan {
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: -2px;
+        }
+
+        /* Estilos del Menú de Navegación */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem; /* Espaciado entre items */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s ease; /* Transición suave para el hover */
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        /* Efecto Hover con línea inferior */
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #007bff;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Estilos del Botón de Acción (Call to Action) */
+        .cta-button {
+            background-color: #007bff;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsividad básica para móviles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+
+            .cta-button {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+
+
+    <header>
+        <a href="#" class="logo-container">
+            <div class="logo-icon">PC</div>
+            <div class="logo-text">
+                <span class="company-name">Technology</span>
+                <span class="slogan">Tu aliado digital</span>
+            </div>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="padweb.html">Inicio</a></li>
+                <li><a href="mapreventivo.html">mantenimiento preventivo</a></li>
+                <li><a href="dispoelectricos.html">Productos electronicos</a></li>
+                <li><a href="mcorrosivo.html">mantenimiento correctivo</a></li>
+                <li><a href="servicios.html">servicios</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <style>
+        .mapa-contenedor {
+            width: 100%;
+            max-width: 600px;
+            height: 450px;
+        }
+        .mapa-contenedor iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Visítanos en PC Technology</h2>
+
+    <!-- Contenedor del mapa -->
+    <div class="mapa-contenedor">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.757!2d-86.78853!3d15.75847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDQ1JzMwLjUiTiA4NsKwNDcnMTguNyJX!5e0!3m2!1ses!2shn!4v1620000000000!5m2!1ses!2shn" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+<style>
+  .btn-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366; /* Verde oficial de WhatsApp */
+    color: white;
+    border-radius: 50px;
+    padding: 12px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  /* Efecto al pasar el mouse por encima */
+  .btn-whatsapp:hover {
+    background-color: #128c7e; /* Verde más oscuro */
+    transform: scale(1.05);
+  }
+
+
+  .btn-whatsapp .icon {
+    font-size: 24px;
+  }
+</style>
+
+<a href="https://wa.me/50433245185?text=Hola me gustaria recibir mas información de la tienda" 
+   class="btn-whatsapp" 
+   target="_blank" 
+   rel="noopener noreferrer">
+  <span class="material-symbols-outlined icon">chat</span>
+  
+</a>
+<!-- Enlace para cargar los iconos de Google (Material Symbols) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+<style>
+  .btn-instagram {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Ubicado a la izquierda para no chocar con el de WhatsApp */
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); /* Degradado de Instagram */
+    color: white;
+    border-radius: 50px;
+    padding: 12px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 1000;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  
+  .btn-instagram:hover {
+    filter: brightness(1.1); 
+    transform: scale(1.05);
+  }
+
+
+  .btn-instagram .icon {
+    font-size: 20px;
+  }
+</style>
+
+
+<a href="https://instagram.com/pc_technology._
+" 
+   class="btn-instagram" 
+   target="_blank" 
+   rel="noopener noreferrer">
+  
+  <span class="material-symbols-outlined icon">photo_camera</span>
+  
+</a>
+
+</body>
+</html>
