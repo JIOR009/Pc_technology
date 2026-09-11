@@ -1,6 +1,0 @@
-services:
-  - type: web
-    name: pc-technology
-    runtime: static
-    buildCommand: ""
-    staticPublishPath: "PC_Technology_Web/paguina web pctecnology"
