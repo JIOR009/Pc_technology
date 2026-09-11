@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: aldea-ishigami-online
+    name: PC_TECHNOLOGY
     runtime: node
     plan: free
     buildCommand: npm install
