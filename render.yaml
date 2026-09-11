@@ -1,9 +1,6 @@
 services:
   - type: web
-    name: PC_TECHNOLOGY
-    runtime: node
-    plan: free
-    buildCommand: npm install
-    startCommand: npm start
-    healthCheckPath: /health
-    autoDeploy: true
+    name: pc-technology
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: "PC_Technology_Web/paguina web pctecnology"
